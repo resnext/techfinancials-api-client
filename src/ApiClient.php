@@ -6,6 +6,7 @@ use GuzzleHttp;
 use Psr\Log\LoggerAwareInterface;
 use Psr\Log\LoggerInterface;
 use TechFinancials\Requests\RegisterTraderRequest;
+use TechFinancials\Responses\FindAccountsResponse;
 use TechFinancials\Responses\RegisterTraderResponse;
 
 class ApiClient implements LoggerAwareInterface
@@ -68,9 +69,27 @@ class ApiClient implements LoggerAwareInterface
             'trackingCode' => $request->getTrackingCode(),
         ];
 
-        $payload = new Payload($this->request('/api/marketeer/customer/registerTrader', $data));
+        $payload = new Payload($this->request('/marketeer/customer/registerTrader', $data));
 
         return new RegisterTraderResponse($payload);
+    }
+
+    /**
+     * @param string $accountId
+     *
+     * @return \TechFinancials\Responses\FindAccountsResponse
+     */
+    public function findAccounts($accountId = null)
+    {
+        $data = [];
+
+        if (!is_null($accountId)) {
+            $data['accountID'] = $accountId;
+        }
+
+        $payload = new Payload($this->request('/marketeer/customer/findAccounts', $data));
+
+        return new FindAccountsResponse($payload);
     }
 
     /**
