@@ -21,5 +21,7 @@ class RegisterTraderTest extends TestCase
         $this->assertTrue($response instanceof RegisterTraderResponse);
 
         $this->assertEquals(831176, $response->getId(), 'Registered trader ID should be equals 831176 for used stub.');
+
+        $this->assertNotEmpty($response->getDepositPageUrl());
     }
 }

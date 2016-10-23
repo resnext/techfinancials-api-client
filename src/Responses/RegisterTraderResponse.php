@@ -11,10 +11,16 @@ class RegisterTraderResponse extends Response
 
     const FIELD_ID = 'id';
 
+    const FIELD_LINKS = 'hyperMediaLinks';
+
+    const FIELD_LINK_TO_DEPOSIT_PAGE = 'TF_DEPOSIT';
+
     /**
      * @var null
      */
     protected $id = null;
+
+    protected $depositPageUrl = null;
 
     public function __construct(Payload $payload)
     {
@@ -27,6 +33,10 @@ class RegisterTraderResponse extends Response
         $data = $payload->getData();
 
         $this->id = $data[self::FIELD_RESULT][self::FIELDS_PREFIX . '_' . self::FIELD_ID];
+
+        if (isset($data[self::FIELD_LINKS][self::FIELD_LINK_TO_DEPOSIT_PAGE])) {
+            $this->depositPageUrl = $data[self::FIELD_LINKS][self::FIELD_LINK_TO_DEPOSIT_PAGE];
+        }
     }
 
     /**
@@ -37,5 +47,15 @@ class RegisterTraderResponse extends Response
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Returns URL for deposit page with auto-login.
+     *
+     * @return string
+     */
+    public function getDepositPageUrl()
+    {
+        return $this->depositPageUrl;
     }
 }
