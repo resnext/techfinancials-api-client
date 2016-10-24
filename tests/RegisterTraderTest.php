@@ -24,4 +24,15 @@ class RegisterTraderTest extends TestCase
 
         $this->assertNotEmpty($response->getDepositPageUrl());
     }
+
+    public function testRegistrationWithExistedEmail()
+    {
+        $apiResponse = new Response(200, [], $this->getStub('successfulRegisterTrader.json'));
+
+        $this->mockResponse($apiResponse);
+
+        $request = new RegisterTraderRequest();
+
+        $response = $this->apiClient->registerTrader($request);
+    }
 }
