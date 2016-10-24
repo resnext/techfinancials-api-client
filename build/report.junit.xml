@@ -1,59 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="tests" tests="2" assertions="7" failures="0" errors="0" time="0.012047">
-    <testsuite name="TechFinancials\Tests\FindAccountsTest" file="/var/www/techfinancials-api-client/tests/FindAccountsTest.php" tests="1" assertions="4" failures="0" errors="0" time="0.010980">
-      <testcase name="testSuccessfulResponse" class="TechFinancials\Tests\FindAccountsTest" file="/var/www/techfinancials-api-client/tests/FindAccountsTest.php" line="10" assertions="4" time="0.010980">
-        <system-out>email@domain.com
-testtesting12345@gmail.com
-test@test334.com
-aaaa@aaaaaas2c.comdf
-asdfasdf@as4333dg.com
-as33df@aas4df.com
-asdfa5333sdf@asdf.com
-autotsaest@tradosrax.com
-testa12@testd.com
-stbaaayqaa@testd.com
-dasdas@trado.com
-test@asdas12d.com
-testztest12@trado.com
-asdf@asd333f.com
-test4@test44555.com
-testiys@tradorax.com
-asdf@asdf33.com
-asdf322asdf@asdf.com
-testis@trador232ax.com
-asdf@asd332f.com
-asdfa331sdf@asdg.com
-asdfasd331f@asdf.com
-asdfa1156sdf@asdg.com
-asdfasdf@as5517dg.com
-ad3af@asdf.com
-asdf@asd3f.comh
-tesdasd@tradorax.com
-tesdasd123@tradorax.com
-testis1te@trado.com
-testgfghissss1te@trado.com
-asdfasdf@as333df.com
-testlaurence@gmail.com
-test@test44445.com
-test@test3334.com
-avinashdaya@hotmail.com
-g.s.johal@gmail.com
-Imtiazdhanani55@gmail.com
-johnsnokurw@eelela.com
-asdfsdf@asdsa.com
-test@aaaa.com
-balalal@aalla.com
-aaaasdasd@asdasad.com
-a2aaasdasd@asdasad.com
-khanna.mahesh@gmail.com
-pmvamseekrishna@gmail.com
-test.reg.1@testmail.com
-</system-out>
-      </testcase>
+  <testsuite name="tests" tests="3" assertions="8" failures="0" errors="0" time="0.151551">
+    <testsuite name="TechFinancials\Tests\FindAccountsTest" file="/var/www/techfinancials-api-client/tests/FindAccountsTest.php" tests="1" assertions="4" failures="0" errors="0" time="0.101893">
+      <testcase name="testSuccessfulResponse" class="TechFinancials\Tests\FindAccountsTest" file="/var/www/techfinancials-api-client/tests/FindAccountsTest.php" line="10" assertions="4" time="0.101893"/>
     </testsuite>
-    <testsuite name="TechFinancials\Tests\RegisterTraderTest" file="/var/www/techfinancials-api-client/tests/RegisterTraderTest.php" tests="1" assertions="3" failures="0" errors="0" time="0.001067">
-      <testcase name="testSuccessfulResponse" class="TechFinancials\Tests\RegisterTraderTest" file="/var/www/techfinancials-api-client/tests/RegisterTraderTest.php" line="11" assertions="3" time="0.001067"/>
+    <testsuite name="TechFinancials\Tests\RegisterTraderTest" file="/var/www/techfinancials-api-client/tests/RegisterTraderTest.php" tests="1" assertions="3" failures="0" errors="0" time="0.049375">
+      <testcase name="testSuccessfulResponse" class="TechFinancials\Tests\RegisterTraderTest" file="/var/www/techfinancials-api-client/tests/RegisterTraderTest.php" line="11" assertions="3" time="0.049375"/>
+    </testsuite>
+    <testsuite name="TechFinancials\Tests\RequestTest" file="/var/www/techfinancials-api-client/tests/RequestTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.000283">
+      <testcase name="testWrongInitialization" class="TechFinancials\Tests\RequestTest" file="/var/www/techfinancials-api-client/tests/RequestTest.php" line="12" assertions="1" time="0.000283"/>
     </testsuite>
   </testsuite>
 </testsuites>

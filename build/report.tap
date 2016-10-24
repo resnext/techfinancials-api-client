@@ -1,50 +1,5 @@
 TAP version 13
 ok 1 - TechFinancials\Tests\FindAccountsTest::testSuccessfulResponse
-# email@domain.com
-# testtesting12345@gmail.com
-# test@test334.com
-# aaaa@aaaaaas2c.comdf
-# asdfasdf@as4333dg.com
-# as33df@aas4df.com
-# asdfa5333sdf@asdf.com
-# autotsaest@tradosrax.com
-# testa12@testd.com
-# stbaaayqaa@testd.com
-# dasdas@trado.com
-# test@asdas12d.com
-# testztest12@trado.com
-# asdf@asd333f.com
-# test4@test44555.com
-# testiys@tradorax.com
-# asdf@asdf33.com
-# asdf322asdf@asdf.com
-# testis@trador232ax.com
-# asdf@asd332f.com
-# asdfa331sdf@asdg.com
-# asdfasd331f@asdf.com
-# asdfa1156sdf@asdg.com
-# asdfasdf@as5517dg.com
-# ad3af@asdf.com
-# asdf@asd3f.comh
-# tesdasd@tradorax.com
-# tesdasd123@tradorax.com
-# testis1te@trado.com
-# testgfghissss1te@trado.com
-# asdfasdf@as333df.com
-# testlaurence@gmail.com
-# test@test44445.com
-# test@test3334.com
-# avinashdaya@hotmail.com
-# g.s.johal@gmail.com
-# Imtiazdhanani55@gmail.com
-# johnsnokurw@eelela.com
-# asdfsdf@asdsa.com
-# test@aaaa.com
-# balalal@aalla.com
-# aaaasdasd@asdasad.com
-# a2aaasdasd@asdasad.com
-# khanna.mahesh@gmail.com
-# pmvamseekrishna@gmail.com
-# test.reg.1@testmail.com
 ok 2 - TechFinancials\Tests\RegisterTraderTest::testSuccessfulResponse
-1..2
+ok 3 - TechFinancials\Tests\RequestTest::testWrongInitialization
+1..3
