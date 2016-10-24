@@ -2,6 +2,7 @@
 
 namespace TechFinancials\Responses;
 
+use TechFinancials\Exceptions\EmailAlreadyExistsException;
 use TechFinancials\Payload;
 use TechFinancials\Response;
 
@@ -27,6 +28,8 @@ class RegisterTraderResponse extends Response
         parent::__construct($payload);
 
         if (!$this->isSuccess()) {
+            $this->processErrors();
+
             return;
         }
 
@@ -57,5 +60,13 @@ class RegisterTraderResponse extends Response
     public function getDepositPageUrl()
     {
         return $this->depositPageUrl;
+    }
+
+    protected function processErrors()
+    {
+        // We have not another ways for this error detection... Thank you, TF.
+        if ($this->getErrorCodes() == 'Identical user ID already found in the system. Please enter different user ID.') {
+            throw new EmailAlreadyExistsException($this, 'Email already exists');
+        }
     }
 }

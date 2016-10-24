@@ -10,6 +10,8 @@ class Response
 
     CONST FIELD_ERROR_CODES = 'errorCodes';
 
+    protected $payload = null;
+
     protected $success;
 
     protected $errorCodes;
@@ -17,6 +19,7 @@ class Response
     protected $result = [];
 
     public function __construct(Payload $payload){
+        $this->payload = $payload;
         $this->success = isset($payload[static::FIELD_SUCCESS]) ? $payload[static::FIELD_SUCCESS] : 0;
         $this->errorCodes = isset($payload[static::FIELD_ERROR_CODES]) ? $payload[static::FIELD_ERROR_CODES] : '';
         $this->result = isset($payload[static::FIELD_RESULT]) ? $payload[static::FIELD_RESULT] : [];
